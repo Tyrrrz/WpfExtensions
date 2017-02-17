@@ -111,7 +111,6 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         private void SelectItems()
         {
-            if (SelectedItems == null) return;
             _viewHandled = true;
             AssociatedObject.SelectedItems.Clear();
             if (SelectedItems != null)
