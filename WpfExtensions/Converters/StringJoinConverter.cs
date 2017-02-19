@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Data;
 
 namespace Tyrrrz.WpfExtensions.Converters
@@ -16,7 +17,7 @@ namespace Tyrrrz.WpfExtensions.Converters
         {
             var enumerable = (IEnumerable) value;
             string separator = (string) parameter ?? ", ";
-            return string.Join(separator, enumerable);
+            return string.Join(separator, enumerable.Cast<object>());
         }
 
         /// <inheritdoc />
