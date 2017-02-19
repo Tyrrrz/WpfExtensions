@@ -63,6 +63,7 @@
     <Compile Include="Converters\ColorToBrushConverter.cs" />
     <Compile Include="Converters\InvertBoolConverter.cs" />
     <Compile Include="Converters\InvertBoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\StringJoinConverter.cs" />
     <Compile Include="Types\WatermarkAdorner.cs" />
     <Compile Include="WpfExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

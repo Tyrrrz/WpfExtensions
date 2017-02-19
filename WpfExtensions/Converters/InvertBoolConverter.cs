@@ -10,18 +10,14 @@ namespace Tyrrrz.WpfExtensions.Converters
     [ValueConversion(typeof (bool), typeof (bool))]
     public class InvertBoolConverter : IValueConverter
     {
-        /// <summary>
-        /// Inverses bool
-        /// </summary>
+        /// <inheritdoc />
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             bool flag = (bool) value;
             return !flag;
         }
 
-        /// <summary>
-        /// Inverses bool
-        /// </summary>
+        /// <inheritdoc />
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             bool flag = (bool) value;

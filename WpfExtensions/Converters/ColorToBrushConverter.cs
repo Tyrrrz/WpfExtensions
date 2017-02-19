@@ -11,18 +11,14 @@ namespace Tyrrrz.WpfExtensions.Converters
     [ValueConversion(typeof (bool), typeof (Brush))]
     public class ColorToBrushConverter : IValueConverter
     {
-        /// <summary>
-        /// Converts color to solid color brush
-        /// </summary>
+        /// <inheritdoc />
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var color = (Color) value;
             return new SolidColorBrush(color);
         }
 
-        /// <summary>
-        /// Converts solid color brush to color
-        /// </summary>
+        /// <inheritdoc />
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var c = (SolidColorBrush) value;
