@@ -23,8 +23,7 @@ namespace Tyrrrz.WpfExtensions.Behaviors
 
         private static T GetVisualChild<T>(DependencyObject parent) where T : Visual
         {
-            var child = default(T);
-
+            T child = null;
             int numVisuals = VisualTreeHelper.GetChildrenCount(parent);
             for (int i = 0; i < numVisuals; i++)
             {
@@ -33,7 +32,6 @@ namespace Tyrrrz.WpfExtensions.Behaviors
                 if (child != null)
                     break;
             }
-
             return child;
         }
 
@@ -59,7 +57,7 @@ namespace Tyrrrz.WpfExtensions.Behaviors
             }
             else
             {
-                var scrollViewer = GetVisualChild<ScrollViewer>(AssociatedObject);
+                var scrollViewer = AssociatedObject as ScrollViewer ?? GetVisualChild<ScrollViewer>(AssociatedObject);
                 if (scrollViewer != null)
                 {
                     var scrollPos = scrollViewer.ContentVerticalOffset;
