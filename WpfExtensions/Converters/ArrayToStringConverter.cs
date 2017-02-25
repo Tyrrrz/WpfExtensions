@@ -10,7 +10,7 @@ namespace Tyrrrz.WpfExtensions.Converters
     /// Converts <see cref="IEnumerable"/> to <see cref="string"/> by using <see cref="string.Join(string,object[])"/>
     /// </summary>
     [ValueConversion(typeof(IEnumerable), typeof(string))]
-    public class StringJoinConverter : IValueConverter
+    public class ArrayToStringConverter : IValueConverter
     {
         /// <inheritdoc />
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

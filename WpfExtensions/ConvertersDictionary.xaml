@@ -6,6 +6,6 @@
     <converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
     <converters:InvertBoolConverter x:Key="InvertBoolConverter" />
     <converters:InvertBoolToVisibilityConverter x:Key="InvertBoolToVisibilityConverter" />
-    <converters:StringJoinConverter x:Key="StringJoinConverter" />
+    <converters:ArrayToStringConverter x:Key="ArrayToStringConverter" />
 
 </ResourceDictionary>
