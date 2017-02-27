@@ -15,6 +15,8 @@ namespace Tyrrrz.WpfExtensions.Converters
         /// <inheritdoc />
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null) return null;
+
             var enumerable = (IEnumerable) value;
             string separator = (string) parameter ?? ", ";
             return string.Join(separator, enumerable.Cast<object>());
@@ -23,6 +25,8 @@ namespace Tyrrrz.WpfExtensions.Converters
         /// <inheritdoc />
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null) return null;
+
             string joined = (string) value;
             string separator = (string) parameter ?? ", ";
             return joined.Split(new [] {separator}, StringSplitOptions.RemoveEmptyEntries);

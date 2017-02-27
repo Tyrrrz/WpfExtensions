@@ -16,6 +16,8 @@ namespace Tyrrrz.WpfExtensions.Converters
         /// <inheritdoc />
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null) return null;
+
             var bytes = (byte[]) value;
             var image = new BitmapImage();
             if (bytes.Length == 0) return image;
