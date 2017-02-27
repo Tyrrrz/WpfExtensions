@@ -2,11 +2,19 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:converters="clr-namespace:Tyrrrz.WpfExtensions.Converters">
 
+    <converters:ArrayToStringConverter x:Key="ArrayToStringConverter" />
     <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    <converters:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
+    <converters:ByteArrayToStringConverter x:Key="ByteArrayToStringConverter" />
     <converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
+    <converters:EnumToStringConverter x:Key="EnumToStringConverter" />
     <converters:InvertBoolConverter x:Key="InvertBoolConverter" />
     <converters:InvertBoolToVisibilityConverter x:Key="InvertBoolToVisibilityConverter" />
-    <converters:ArrayToStringConverter x:Key="ArrayToStringConverter" />
-    <converters:EnumToStringConverter x:Key="EnumToStringConverter" />
+    <converters:TimeSpanToDaysConverter x:Key="TimeSpanToDaysConverter" />
+    <converters:TimeSpanToHoursConverter x:Key="TimeSpanToHoursConverter" />
+    <converters:TimeSpanToMillisecondsConverter x:Key="TimeSpanToMillisecondsConverter" />
+    <converters:TimeSpanToMinutesConverter x:Key="TimeSpanToMinutesConverter" />
+    <converters:TimeSpanToSecondsConverter x:Key="TimeSpanToSecondsConverter" />
+    <converters:TimeSpanToTicksConverter x:Key="TimeSpanToTicksConverter" />
 
 </ResourceDictionary>
