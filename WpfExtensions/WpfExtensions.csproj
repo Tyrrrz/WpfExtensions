@@ -59,7 +59,10 @@
     <Compile Include="Behaviors\TextBoxLinesBehavior.cs" />
     <Compile Include="Behaviors\TextBoxNumericInputBehavior.cs" />
     <Compile Include="Behaviors\TreeViewSelectionBehavior.cs" />
+    <Compile Include="Converters\BoolAndMultiConverter.cs" />
+    <Compile Include="Converters\BoolOrMultiConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\BoolXorMultiConverter.cs" />
     <Compile Include="Converters\ByteArrayToImageConverter.cs" />
     <Compile Include="Converters\ByteArrayToStringConverter.cs" />
     <Compile Include="Converters\ColorToBrushConverter.cs" />

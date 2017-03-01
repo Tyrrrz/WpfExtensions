@@ -3,6 +3,9 @@
                     xmlns:converters="clr-namespace:Tyrrrz.WpfExtensions.Converters">
 
     <converters:ArrayToStringConverter x:Key="ArrayToStringConverter" />
+    <converters:BoolAndMultiConverter x:Key="BoolAndMultiConverter" />
+    <converters:BoolOrMultiConverter x:Key="BoolOrMultiConverter" />
+    <converters:BoolXorMultiConverter x:Key="BoolXorMultiConverter" />
     <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
     <converters:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
     <converters:ByteArrayToStringConverter x:Key="ByteArrayToStringConverter" />
