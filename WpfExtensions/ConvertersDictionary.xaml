@@ -15,9 +15,8 @@
     <converters:InvertBoolToVisibilityConverter x:Key="InvertBoolToVisibilityConverter" />
     <converters:TimeSpanToDaysConverter x:Key="TimeSpanToDaysConverter" />
     <converters:TimeSpanToHoursConverter x:Key="TimeSpanToHoursConverter" />
-    <converters:TimeSpanToMillisecondsConverter x:Key="TimeSpanToMillisecondsConverter" />
     <converters:TimeSpanToMinutesConverter x:Key="TimeSpanToMinutesConverter" />
     <converters:TimeSpanToSecondsConverter x:Key="TimeSpanToSecondsConverter" />
-    <converters:TimeSpanToTicksConverter x:Key="TimeSpanToTicksConverter" />
+    <converters:TimeSpanToMillisecondsConverter x:Key="TimeSpanToMillisecondsConverter" />
 
 </ResourceDictionary>

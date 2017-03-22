@@ -18,7 +18,7 @@ namespace Tyrrrz.WpfExtensions.Converters
             if (value == null) return null;
 
             var enumerable = (IEnumerable) value;
-            string separator = (string) parameter ?? ", ";
+            string separator = parameter as string ?? ", ";
             return string.Join(separator, enumerable.Cast<object>());
         }
 
@@ -28,7 +28,7 @@ namespace Tyrrrz.WpfExtensions.Converters
             if (value == null) return null;
 
             string joined = (string) value;
-            string separator = (string) parameter ?? ", ";
+            string separator = parameter as string ?? ", ";
             return joined.Split(new [] {separator}, StringSplitOptions.RemoveEmptyEntries);
         }
     }

@@ -27,10 +27,7 @@ namespace Tyrrrz.WpfExtensions.Behaviors
             if (behavior._modelHandled) return;
 
             if (behavior.AssociatedObject == null)
-            {
-                behavior._lateAttachment = true;
                 return;
-            }
 
             behavior._modelHandled = true;
             behavior.LinesToText();
@@ -39,7 +36,6 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         #endregion
 
         private bool _modelHandled;
-        private bool _lateAttachment;
 
         /// <summary>
         /// Bindable lines

@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
-#if Net45
 
+#if Net45
+using System.Threading.Tasks;
 #endif
 
 namespace Tyrrrz.WpfExtensions

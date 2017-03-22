@@ -211,7 +211,7 @@ namespace Tyrrrz.WpfExtensions.Behaviors
 
             if (AssociatedObject != null)
             {
-                AssociatedObject.ItemContainerStyle?.Setters?.Remove(_treeViewItemEventSetter);
+                AssociatedObject.ItemContainerStyle?.Setters.Remove(_treeViewItemEventSetter);
                 AssociatedObject.SelectedItemChanged -= OnTreeViewSelectedItemChanged;
                 ((INotifyCollectionChanged) AssociatedObject.Items).CollectionChanged -= OnTreeViewItemsChanged;
             }

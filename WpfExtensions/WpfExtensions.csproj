@@ -75,7 +75,6 @@
     <Compile Include="Converters\TimeSpanToMillisecondsConverter.cs" />
     <Compile Include="Converters\TimeSpanToMinutesConverter.cs" />
     <Compile Include="Converters\TimeSpanToSecondsConverter.cs" />
-    <Compile Include="Converters\TimeSpanToTicksConverter.cs" />
     <Compile Include="Types\WatermarkAdorner.cs" />
     <Compile Include="WpfExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
