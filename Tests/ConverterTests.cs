@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -29,7 +30,13 @@ namespace Tyrrrz.WpfExtensions.Tests
             Assert.IsNotNull(bForward);
             Assert.AreEqual("1, 2, 3", bForward);
 
-            // Back conversion doesn't matter
+            var aBack = conv.ConvertBack(aForward, null, ";", _cult) as string[];
+            var bBack = conv.ConvertBack(bForward, null, null, _cult) as string[];
+
+            Assert.IsNotNull(aBack);
+            CollectionAssert.AreEqual(a, aBack);
+            Assert.IsNotNull(bBack);
+            CollectionAssert.AreEqual(b, bBack.Select(int.Parse).ToArray());
         }
 
         [TestMethod]

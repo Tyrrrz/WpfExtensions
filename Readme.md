@@ -2,6 +2,6 @@
 
 My WPF Extensions
 
-**Download and install:**
+**Download:**
 
 - Using nuget: `Install-Package Tyrrrz.WpfExtensions`
