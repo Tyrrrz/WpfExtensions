@@ -14,6 +14,9 @@ namespace Tyrrrz.WpfExtensions.Converters
         /// <inheritdoc />
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             var e = (Enum) value;
             string str = e.ToString();
             return Regex.Replace(str, @"([a-z])([A-Z])", "$1 $2");
@@ -22,6 +25,9 @@ namespace Tyrrrz.WpfExtensions.Converters
         /// <inheritdoc />
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             string str = (string) value;
             str = str.Replace(" ", "");
             return Enum.Parse(targetType, str);

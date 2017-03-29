@@ -14,6 +14,9 @@ namespace Tyrrrz.WpfExtensions.Converters
         /// <inheritdoc />
         public virtual object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             var visibility = Visibility.Hidden;
             bool flag = (bool) value;
 
@@ -27,6 +30,9 @@ namespace Tyrrrz.WpfExtensions.Converters
         /// <inheritdoc />
         public virtual object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             var visibility = (Visibility) value;
             return visibility == Visibility.Visible;
         }
