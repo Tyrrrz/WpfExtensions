@@ -102,6 +102,7 @@ namespace Tyrrrz.WpfExtensions.Tests
         [TestMethod]
         public void BoolToVisibilityConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new BoolToVisibilityConverter();
 
             var trueForward = (Visibility) conv.Convert(true, null, null, _cult);
@@ -119,6 +120,7 @@ namespace Tyrrrz.WpfExtensions.Tests
             Assert.IsTrue(trueBack);
             Assert.IsFalse(falseBack);
             Assert.IsFalse(falseBackCollapsed);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         [TestMethod]
@@ -158,6 +160,7 @@ namespace Tyrrrz.WpfExtensions.Tests
         [TestMethod]
         public void ColorToBrushConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new ColorToBrushConverter();
 
             var color = Colors.Red;
@@ -169,6 +172,7 @@ namespace Tyrrrz.WpfExtensions.Tests
             var colorBack = (Color) conv.ConvertBack(colorForward, null, null, _cult);
 
             Assert.AreEqual(color, colorBack);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         [TestMethod]
@@ -195,6 +199,7 @@ namespace Tyrrrz.WpfExtensions.Tests
         [TestMethod]
         public void InvertBoolConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new InvertBoolConverter();
 
             bool trueForward = (bool) conv.Convert(true, null, null, _cult);
@@ -208,11 +213,13 @@ namespace Tyrrrz.WpfExtensions.Tests
 
             Assert.IsTrue(trueBack);
             Assert.IsFalse(falseBack);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         [TestMethod]
         public void InvertBoolToVisibilityConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new InvertBoolToVisibilityConverter();
 
             var trueForward = (Visibility) conv.Convert(true, null, null, _cult);
@@ -230,11 +237,13 @@ namespace Tyrrrz.WpfExtensions.Tests
             Assert.IsTrue(trueBack);
             Assert.IsTrue(trueBackCollapsed);
             Assert.IsFalse(falseBack);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         [TestMethod]
         public void TimeSpanToDaysConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new TimeSpanToDaysConverter();
 
             var ts = new TimeSpan(5, 0, 0, 0);
@@ -246,70 +255,79 @@ namespace Tyrrrz.WpfExtensions.Tests
             var tsBack = (TimeSpan) conv.ConvertBack(tsForward, null, null, _cult);
 
             Assert.AreEqual(ts, tsBack);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         [TestMethod]
         public void TimeSpanToHoursConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new TimeSpanToHoursConverter();
 
             var ts = new TimeSpan(5, 0, 0, 0);
 
             var tsForward = (double) conv.Convert(ts, null, null, _cult);
 
-            Assert.AreEqual(5*24, tsForward, 10e-10);
+            Assert.AreEqual(5 * 24, tsForward, 10e-10);
 
             var tsBack = (TimeSpan) conv.ConvertBack(tsForward, null, null, _cult);
 
             Assert.AreEqual(ts, tsBack);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         [TestMethod]
         public void TimeSpanToMinutesConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new TimeSpanToMinutesConverter();
 
             var ts = new TimeSpan(5, 0, 0, 0);
 
             var tsForward = (double) conv.Convert(ts, null, null, _cult);
 
-            Assert.AreEqual(5*24*60, tsForward, 10e-10);
+            Assert.AreEqual(5 * 24 * 60, tsForward, 10e-10);
 
             var tsBack = (TimeSpan) conv.ConvertBack(tsForward, null, null, _cult);
 
             Assert.AreEqual(ts, tsBack);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         [TestMethod]
         public void TimeSpanToSecondsConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new TimeSpanToSecondsConverter();
 
             var ts = new TimeSpan(5, 0, 0, 0);
 
             var tsForward = (double) conv.Convert(ts, null, null, _cult);
 
-            Assert.AreEqual(5*24*60*60, tsForward, 10e-10);
+            Assert.AreEqual(5 * 24 * 60 * 60, tsForward, 10e-10);
 
             var tsBack = (TimeSpan) conv.ConvertBack(tsForward, null, null, _cult);
 
             Assert.AreEqual(ts, tsBack);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         [TestMethod]
         public void TimeSpanToMillisecondsConverterTest()
         {
+            // ReSharper disable PossibleNullReferenceException
             var conv = new TimeSpanToMillisecondsConverter();
 
             var ts = new TimeSpan(5, 0, 0, 0);
 
             var tsForward = (double) conv.Convert(ts, null, null, _cult);
 
-            Assert.AreEqual(5*24*60*60*1000, tsForward, 10e-10);
+            Assert.AreEqual(5 * 24 * 60 * 60 * 1000, tsForward, 10e-10);
 
             var tsBack = (TimeSpan) conv.ConvertBack(tsForward, null, null, _cult);
 
             Assert.AreEqual(ts, tsBack);
+            // ReSharper restore PossibleNullReferenceException
         }
     }
 }

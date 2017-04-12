@@ -76,8 +76,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public bool IsFloatingPoint
         {
-            get { return (bool) GetValue(IsFloatingPointProperty); }
-            set { SetValue(IsFloatingPointProperty, value); }
+            get => (bool) GetValue(IsFloatingPointProperty);
+            set => SetValue(IsFloatingPointProperty, value);
         }
 
         /// <summary>
@@ -85,8 +85,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public double ValueDouble
         {
-            get { return (double) GetValue(ValueDoubleProperty); }
-            set { SetValue(ValueDoubleProperty, value); }
+            get => (double) GetValue(ValueDoubleProperty);
+            set => SetValue(ValueDoubleProperty, value);
         }
 
         /// <summary>
@@ -94,8 +94,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public long ValueInt
         {
-            get { return (long) GetValue(ValueIntProperty); }
-            set { SetValue(ValueIntProperty, value); }
+            get => (long) GetValue(ValueIntProperty);
+            set => SetValue(ValueIntProperty, value);
         }
 
         private void TextToValue()

@@ -43,8 +43,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public bool AlwaysBubble
         {
-            get { return (bool) GetValue(AlwaysBubbleProperty); }
-            set { SetValue(AlwaysBubbleProperty, value); }
+            get => (bool) GetValue(AlwaysBubbleProperty);
+            set => SetValue(AlwaysBubbleProperty, value);
         }
 
         private void PreviewMouseWheel(object sender, MouseWheelEventArgs e)

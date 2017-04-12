@@ -42,8 +42,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public string[] Lines
         {
-            get { return (string[]) GetValue(LinesProperty); }
-            set { SetValue(LinesProperty, value); }
+            get => (string[]) GetValue(LinesProperty);
+            set => SetValue(LinesProperty, value);
         }
 
         private void LinesToText()

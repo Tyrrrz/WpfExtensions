@@ -30,7 +30,7 @@ namespace Tyrrrz.WpfExtensions.Converters
 
             string str = (string) value;
             str = str.Replace(" ", "");
-            return Enum.Parse(targetType, str);
+            return Enum.Parse(targetType, str, true);
         }
     }
 }

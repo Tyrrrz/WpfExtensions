@@ -70,8 +70,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public object SelectedItem
         {
-            get { return GetValue(SelectedItemProperty); }
-            set { SetValue(SelectedItemProperty, value); }
+            get => GetValue(SelectedItemProperty);
+            set => SetValue(SelectedItemProperty, value);
         }
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public IsChildOfPredicate HierarchyPredicate
         {
-            get { return (IsChildOfPredicate) GetValue(HierarchyPredicateProperty); }
-            set { SetValue(HierarchyPredicateProperty, value); }
+            get => (IsChildOfPredicate) GetValue(HierarchyPredicateProperty);
+            set => SetValue(HierarchyPredicateProperty, value);
         }
 
         /// <summary>
@@ -88,8 +88,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public bool ExpandSelected
         {
-            get { return (bool) GetValue(ExpandSelectedProperty); }
-            set { SetValue(ExpandSelectedProperty, value); }
+            get => (bool) GetValue(ExpandSelectedProperty);
+            set => SetValue(ExpandSelectedProperty, value);
         }
 
         /// <inheritdoc />

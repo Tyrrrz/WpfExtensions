@@ -1,10 +1,7 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
-
-#if Net45
-using System.Threading.Tasks;
-#endif
 
 namespace Tyrrrz.WpfExtensions
 {
@@ -31,14 +28,9 @@ namespace Tyrrrz.WpfExtensions
         {
             if (dispatcher.CheckAccess())
                 return func();
-#if Net45
             return dispatcher.Invoke(func);
-#else
-            return (T) dispatcher.Invoke(func);
-#endif
         }
 
-#if Net45
         /// <summary>
         /// Invokes the delegate asynchronously on the dispatcher thread if necessary or synchronously if not
         /// </summary>
@@ -59,7 +51,6 @@ namespace Tyrrrz.WpfExtensions
                 return func();
             return await dispatcher.InvokeAsync(func);
         }
-#endif
 
         /// <summary>
         /// Safely shutdowns an application from dispatcher thread
@@ -100,7 +91,6 @@ namespace Tyrrrz.WpfExtensions
             return InvokeSafe(window.Dispatcher, func);
         }
 
-#if Net45
         /// <summary>
         /// Shows a message box asynchronously from the dispatcher of the given window
         /// </summary>
@@ -113,6 +103,5 @@ namespace Tyrrrz.WpfExtensions
                 new Func<MessageBoxResult>(() => MessageBox.Show(window, message, title, buttonSet, image, defaultResult));
             return await InvokeSafeAsync(window.Dispatcher, func);
         }
-#endif
     }
 }

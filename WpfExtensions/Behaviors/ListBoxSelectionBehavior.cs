@@ -75,11 +75,11 @@ namespace Tyrrrz.WpfExtensions.Behaviors
                 {
                     string[] split = path.Split('.');
                     string remainingProperty = path.Substring(path.IndexOf('.') + 1);
-                    obj = obj.GetType().GetProperty(split[0]).GetValue(obj, null);
+                    obj = obj?.GetType().GetProperty(split[0])?.GetValue(obj, null);
                     path = remainingProperty;
                     continue;
                 }
-                return obj.GetType().GetProperty(path).GetValue(obj, null);
+                return obj?.GetType().GetProperty(path)?.GetValue(obj, null);
             }
         }
 
@@ -93,8 +93,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public IList SelectedItems
         {
-            get { return (IList) GetValue(SelectedItemsProperty); }
-            set { SetValue(SelectedItemsProperty, value); }
+            get => (IList) GetValue(SelectedItemsProperty);
+            set => SetValue(SelectedItemsProperty, value);
         }
 
         /// <summary>
@@ -102,8 +102,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         /// </summary>
         public IList SelectedValues
         {
-            get { return (IList) GetValue(SelectedValuesProperty); }
-            set { SetValue(SelectedValuesProperty, value); }
+            get => (IList) GetValue(SelectedValuesProperty);
+            set => SetValue(SelectedValuesProperty, value);
         }
 
         /// <summary>
