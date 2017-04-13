@@ -8,25 +8,16 @@
     <Product>Tyrrrz WPF Extensions Library</Product>
     <Description>WPF extensions for rapid development</Description>
     <AssemblyVersion>1.0.5</AssemblyVersion>
-    <PackageVersion>1.0.5</PackageVersion>
-    <FileVersion>1.0.5</FileVersion>
+    <PackageVersion>$(AssemblyVersion)</PackageVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
     <Company>Tyrrrz</Company>
-    <Authors>Tyrrrz</Authors>
+    <Authors>$(Company)</Authors>
     <Copyright>Copyright (C) Alexey 'Tyrrrz' Golub 2016-2017</Copyright>
     <PackageProjectUrl>https://github.com/Tyrrrz/WpfExtensions</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/Tyrrrz/WpfExtensions/master/License.txt</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>bin\Debug\net45\Tyrrrz.WpfExtensions.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>bin\Release\net45\Tyrrrz.WpfExtensions.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
