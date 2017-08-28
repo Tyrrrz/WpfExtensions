@@ -1,4 +1,4 @@
-﻿namespace Tyrrrz.WpfExtensions.Tests.Mocks
+﻿namespace Tests.Mocks
 {
     public enum MockEnum
     {
