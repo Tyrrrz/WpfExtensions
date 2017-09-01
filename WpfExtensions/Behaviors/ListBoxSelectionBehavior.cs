@@ -73,8 +73,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
             {
                 if (path.Contains('.'))
                 {
-                    string[] split = path.Split('.');
-                    string remainingProperty = path.Substring(path.IndexOf('.') + 1);
+                    var split = path.Split('.');
+                    var remainingProperty = path.Substring(path.IndexOf('.') + 1);
                     obj = obj?.GetType().GetProperty(split[0])?.GetValue(obj, null);
                     path = remainingProperty;
                     continue;

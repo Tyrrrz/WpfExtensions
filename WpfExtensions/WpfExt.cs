@@ -65,8 +65,8 @@ namespace Tyrrrz.WpfExtensions
         /// </summary>
         public static void ShutdownSafe(this Application application, Enum code)
         {
-            object codeActualValue = Convert.ChangeType(code, code.GetTypeCode());
-            int codeInt = (int?) codeActualValue ?? 0;
+            var codeActualValue = Convert.ChangeType(code, code.GetTypeCode());
+            var codeInt = (int?) codeActualValue ?? 0;
             InvokeSafe(application.Dispatcher, () => application.Shutdown(codeInt));
         }
 

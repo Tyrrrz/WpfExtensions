@@ -22,8 +22,8 @@ namespace Tests
             var a = new[] {"asd", "qwe", "zzz"};
             var b = new[] {1, 2, 3};
 
-            string aForward = conv.Convert(a, null, ";", _cult) as string;
-            string bForward = conv.Convert(b, null, null, _cult) as string;
+            var aForward = conv.Convert(a, null, ";", _cult) as string;
+            var bForward = conv.Convert(b, null, null, _cult) as string;
 
             Assert.IsNotNull(aForward);
             Assert.AreEqual("asd;qwe;zzz", aForward);
@@ -48,9 +48,9 @@ namespace Tests
             var b = new object[] {true, false, false};
             var c = new object[] {false, false, false};
 
-            bool aForward = (bool) conv.Convert(a, null, null, _cult);
-            bool bForward = (bool) conv.Convert(b, null, null, _cult);
-            bool cForward = (bool) conv.Convert(c, null, null, _cult);
+            var aForward = (bool) conv.Convert(a, null, null, _cult);
+            var bForward = (bool) conv.Convert(b, null, null, _cult);
+            var cForward = (bool) conv.Convert(c, null, null, _cult);
 
             Assert.IsTrue(aForward);
             Assert.IsFalse(bForward);
@@ -68,9 +68,9 @@ namespace Tests
             var b = new object[] {true, false, false};
             var c = new object[] {false, false, false};
 
-            bool aForward = (bool) conv.Convert(a, null, null, _cult);
-            bool bForward = (bool) conv.Convert(b, null, null, _cult);
-            bool cForward = (bool) conv.Convert(c, null, null, _cult);
+            var aForward = (bool) conv.Convert(a, null, null, _cult);
+            var bForward = (bool) conv.Convert(b, null, null, _cult);
+            var cForward = (bool) conv.Convert(c, null, null, _cult);
 
             Assert.IsTrue(aForward);
             Assert.IsTrue(bForward);
@@ -88,9 +88,9 @@ namespace Tests
             var b = new object[] {true, false, false};
             var c = new object[] {false, false, false};
 
-            bool aForward = (bool) conv.Convert(a, null, null, _cult);
-            bool bForward = (bool) conv.Convert(b, null, null, _cult);
-            bool cForward = (bool) conv.Convert(c, null, null, _cult);
+            var aForward = (bool) conv.Convert(a, null, null, _cult);
+            var bForward = (bool) conv.Convert(b, null, null, _cult);
+            var cForward = (bool) conv.Convert(c, null, null, _cult);
 
             Assert.IsFalse(aForward);
             Assert.IsTrue(bForward);
@@ -113,9 +113,9 @@ namespace Tests
             Assert.AreEqual(Visibility.Hidden, falseForward);
             Assert.AreEqual(Visibility.Collapsed, falseForwardCollapsed);
 
-            bool trueBack = (bool) conv.ConvertBack(trueForward, null, null, _cult);
-            bool falseBack = (bool) conv.ConvertBack(falseForward, null, null, _cult);
-            bool falseBackCollapsed = (bool) conv.ConvertBack(falseForwardCollapsed, null, Visibility.Collapsed, _cult);
+            var trueBack = (bool) conv.ConvertBack(trueForward, null, null, _cult);
+            var falseBack = (bool) conv.ConvertBack(falseForward, null, null, _cult);
+            var falseBackCollapsed = (bool) conv.ConvertBack(falseForwardCollapsed, null, Visibility.Collapsed, _cult);
 
             Assert.IsTrue(trueBack);
             Assert.IsFalse(falseBack);
@@ -202,14 +202,14 @@ namespace Tests
             // ReSharper disable PossibleNullReferenceException
             var conv = new InvertBoolConverter();
 
-            bool trueForward = (bool) conv.Convert(true, null, null, _cult);
-            bool falseForward = (bool) conv.Convert(false, null, null, _cult);
+            var trueForward = (bool) conv.Convert(true, null, null, _cult);
+            var falseForward = (bool) conv.Convert(false, null, null, _cult);
 
             Assert.IsFalse(trueForward);
             Assert.IsTrue(falseForward);
 
-            bool trueBack = (bool) conv.ConvertBack(false, null, null, _cult);
-            bool falseBack = (bool) conv.ConvertBack(true, null, null, _cult);
+            var trueBack = (bool) conv.ConvertBack(false, null, null, _cult);
+            var falseBack = (bool) conv.ConvertBack(true, null, null, _cult);
 
             Assert.IsTrue(trueBack);
             Assert.IsFalse(falseBack);
@@ -230,9 +230,9 @@ namespace Tests
             Assert.AreEqual(Visibility.Collapsed, trueForwardCollapsed);
             Assert.AreEqual(Visibility.Visible, falseForward);
 
-            bool trueBack = (bool) conv.ConvertBack(trueForward, null, null, _cult);
-            bool trueBackCollapsed = (bool) conv.ConvertBack(trueForwardCollapsed, null, Visibility.Collapsed, _cult);
-            bool falseBack = (bool) conv.ConvertBack(falseForward, null, null, _cult);
+            var trueBack = (bool) conv.ConvertBack(trueForward, null, null, _cult);
+            var trueBackCollapsed = (bool) conv.ConvertBack(trueForwardCollapsed, null, Visibility.Collapsed, _cult);
+            var falseBack = (bool) conv.ConvertBack(falseForward, null, null, _cult);
 
             Assert.IsTrue(trueBack);
             Assert.IsTrue(trueBackCollapsed);

@@ -26,7 +26,7 @@ namespace Tyrrrz.WpfExtensions.Converters
         {
             if (value == null) return null;
 
-            string str = (string) value;
+            var str = (string) value;
             var encoding = parameter as Encoding ?? Encoding.UTF8;
             return encoding.GetBytes(str);
         }

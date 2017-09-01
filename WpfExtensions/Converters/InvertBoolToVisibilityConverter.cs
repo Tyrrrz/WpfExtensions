@@ -17,7 +17,7 @@ namespace Tyrrrz.WpfExtensions.Converters
             if (value == null)
                 throw new ArgumentNullException(nameof(value));
 
-            bool flag = (bool) value;
+            var flag = (bool) value;
             // ReSharper disable once PossibleNullReferenceException
             return (Visibility) base.Convert(!flag, targetType, parameter, culture);
         }
@@ -29,7 +29,7 @@ namespace Tyrrrz.WpfExtensions.Converters
                 throw new ArgumentNullException(nameof(value));
 
             // ReSharper disable once PossibleNullReferenceException
-            bool flag = (bool) base.ConvertBack(value, targetType, parameter, culture);
+            var flag = (bool) base.ConvertBack(value, targetType, parameter, culture);
             return !flag;
         }
     }

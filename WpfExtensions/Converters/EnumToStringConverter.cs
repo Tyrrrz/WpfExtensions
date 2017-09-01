@@ -18,7 +18,7 @@ namespace Tyrrrz.WpfExtensions.Converters
                 throw new ArgumentNullException(nameof(value));
 
             var e = (Enum) value;
-            string str = e.ToString();
+            var str = e.ToString();
             return Regex.Replace(str, @"([a-z])([A-Z])", "$1 $2");
         }
 
@@ -28,7 +28,7 @@ namespace Tyrrrz.WpfExtensions.Converters
             if (value == null)
                 throw new ArgumentNullException(nameof(value));
 
-            string str = (string) value;
+            var str = (string) value;
             str = str.Replace(" ", "");
             return Enum.Parse(targetType, str, true);
         }

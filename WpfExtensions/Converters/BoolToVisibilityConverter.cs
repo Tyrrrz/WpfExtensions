@@ -18,7 +18,7 @@ namespace Tyrrrz.WpfExtensions.Converters
                 throw new ArgumentNullException(nameof(value));
 
             var visibility = Visibility.Hidden;
-            bool flag = (bool) value;
+            var flag = (bool) value;
 
             // Set default visibility if parameter is set
             if (parameter is Visibility)

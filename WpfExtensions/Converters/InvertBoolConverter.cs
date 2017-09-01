@@ -16,7 +16,7 @@ namespace Tyrrrz.WpfExtensions.Converters
             if (value == null)
                 throw new ArgumentNullException(nameof(value));
 
-            bool flag = (bool) value;
+            var flag = (bool) value;
             return !flag;
         }
 
@@ -26,7 +26,7 @@ namespace Tyrrrz.WpfExtensions.Converters
             if (value == null)
                 throw new ArgumentNullException(nameof(value));
 
-            bool flag = (bool) value;
+            var flag = (bool) value;
             return !flag;
         }
     }

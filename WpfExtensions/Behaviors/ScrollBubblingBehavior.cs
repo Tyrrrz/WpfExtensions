@@ -24,8 +24,8 @@ namespace Tyrrrz.WpfExtensions.Behaviors
         private static T GetVisualChild<T>(DependencyObject parent) where T : Visual
         {
             T child = null;
-            int numVisuals = VisualTreeHelper.GetChildrenCount(parent);
-            for (int i = 0; i < numVisuals; i++)
+            var numVisuals = VisualTreeHelper.GetChildrenCount(parent);
+            for (var i = 0; i < numVisuals; i++)
             {
                 var v = (Visual) VisualTreeHelper.GetChild(parent, i);
                 child = v as T ?? GetVisualChild<T>(v);

@@ -118,7 +118,7 @@ namespace Tyrrrz.WpfExtensions.Behaviors
             // If the selected item is a parent of this model - expand
             else
             {
-                bool isParentOfModel = HierarchyPredicate?.Invoke(SelectedItem, model) ?? true;
+                var isParentOfModel = HierarchyPredicate?.Invoke(SelectedItem, model) ?? true;
                 if (isParentOfModel)
                     item.IsExpanded = true;
             }
