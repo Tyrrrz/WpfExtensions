@@ -4,10 +4,10 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Tests.Mocks;
 using Tyrrrz.WpfExtensions.Converters;
+using Tyrrrz.WpfExtensions.Tests.Mocks;
 
-namespace Tests
+namespace Tyrrrz.WpfExtensions.Tests
 {
     [TestClass]
     public class ConverterTests

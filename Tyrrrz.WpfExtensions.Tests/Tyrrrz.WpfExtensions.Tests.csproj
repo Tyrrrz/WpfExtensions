@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WpfExtensions\WpfExtensions.csproj" />
+    <ProjectReference Include="..\Tyrrrz.WpfExtensions\Tyrrrz.WpfExtensions.csproj" />
   </ItemGroup>
 
   <ItemGroup>

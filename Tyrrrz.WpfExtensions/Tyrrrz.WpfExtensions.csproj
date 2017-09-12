@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
-    <AssemblyName>Tyrrrz.WpfExtensions</AssemblyName>
-    <RootNamespace>$(AssemblyName)</RootNamespace>
     <Version>1.0.5</Version>
     <Company>Tyrrrz</Company>
     <Authors>$(Company)</Authors>

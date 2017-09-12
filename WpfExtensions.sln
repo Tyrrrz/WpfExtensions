@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{07DCAECA-F534-412B-AAE2-153BEB288C13}"
 	ProjectSection(SolutionItems) = preProject
@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExtensions", "WpfExtensions\WpfExtensions.csproj", "{9B309BC5-C296-43C1-AB54-0B83978023B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyrrrz.WpfExtensions", "Tyrrrz.WpfExtensions\Tyrrrz.WpfExtensions.csproj", "{9B309BC5-C296-43C1-AB54-0B83978023B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{490F8FB7-82F4-489C-9F1E-73BB303074B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyrrrz.WpfExtensions.Tests", "Tyrrrz.WpfExtensions.Tests\Tyrrrz.WpfExtensions.Tests.csproj", "{490F8FB7-82F4-489C-9F1E-73BB303074B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EFFFBD9-8212-44D5-8050-9976443C3828}
 	EndGlobalSection
 EndGlobal
