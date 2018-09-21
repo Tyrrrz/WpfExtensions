@@ -1,7 +1,7 @@
-# Tyrrrz WPF Extensions Library
+# Tyrrrz.WpfExtensions
 
 My WPF Extensions
 
 ## Download
 
-- Using nuget: `Install-Package Tyrrrz.WpfExtensions`
+- [NuGet](https://nuget.org/packages/Tyrrrz.WpfExtensions): `Install-Package Tyrrrz.WpfExtensions`
